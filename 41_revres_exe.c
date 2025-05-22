@@ -23,10 +23,10 @@
 void main()
 {
 
-    int num,reminder,reverse=0,
+    int num,reminder,reverse=0;
     printf("enter a number:-");
     scanf("%d",&num);
-    for(count=0;num>0;count++)
+    while(num>0)
     {
     reminder = num % 10 ;   
     reverse = (reverse * 10) + reminder;
