@@ -1,33 +1,37 @@
-//2) write a program to count odd and even values in array 
 #include <stdio.h>
-void main() {
-    int n, i;
-    int evenCount = 0, oddCount = 0;
 
-    // User se array size input lena
-    printf("Enter the number of elements in the array: ");
+int main() {
+    int arr[100], even[100], odd[100];
+    int n, i, e = 0, o = 0;
+
+    // Input array size
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    int arr[n]; // Array 
-
-    // User se array elements input lena
+    // Input elements
     printf("Enter %d elements:\n", n);
-    for (i = 0; i < n; i++) {
+    for(i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-    }
 
-    // Odd aur even logic use
-    for (i = 0; i < n; i++) {
-        if (arr[i] % 2 == 0) {
-            evenCount++; // Even number
+        // Check if even or odd
+        if(arr[i] % 2 == 0) {
+            even[e++] = arr[i];
         } else {
-            oddCount++; // Odd number
+            odd[o++] = arr[i];
         }
     }
 
-    // print 
-    printf("Total even numbers: %d\n", evenCount);
-    printf("Total odd numbers: %d\n", oddCount);
+    // Display even numbers
+    printf("\nEven numbers:\n");
+    for(i = 0; i < e; i++) {
+        printf("%d ", even[i]);
+    }
 
-    
+    // Display odd numbers
+    printf("\nOdd numbers:\n");
+    for(i = 0; i < o; i++) {
+        printf("%d ", odd[i]);
+    }
+
+    return 0;
 }
