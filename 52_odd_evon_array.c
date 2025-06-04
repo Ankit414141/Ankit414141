@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int arr[100], even[100], odd[100];
     int n, i, e = 0, o = 0;
 
@@ -33,5 +33,5 @@ int main() {
         printf("%d ", odd[i]);
     }
 
-    return 0;
+
 }
